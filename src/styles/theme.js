@@ -3,10 +3,10 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#2196f3", // change to your desired primary color
+      main: "#53001F", // change to your desired primary color
     },
     secondary: {
-      main: "#f44336", // change to your desired secondary color
+      main: "#DDAF74", // change to your desired secondary color
     },
     background: {
       default: "#f5f5f5", // change to your desired default background color
@@ -14,7 +14,7 @@ const theme = createTheme({
     },
     text: {
       primary: "#333333", // change to your desired primary text color
-      secondary: "#666666", // change to your desired secondary text color
+      secondary: "#A7AAAF", // change to your desired secondary text color
     },
   },
   typography: {
@@ -69,7 +69,7 @@ const theme = createTheme({
       },
       containedPrimary: {
         "&:hover": {
-          backgroundColor: "#1976d2", // change to your desired hover color
+          backgroundColor: "#CC964E", // change to your desired hover color
         },
       },
     },
