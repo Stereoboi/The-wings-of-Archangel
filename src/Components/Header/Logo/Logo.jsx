@@ -1,4 +1,4 @@
 const Logo = () => {
-  return <div>logo</div>;
+  return <div></div>;
 };
 export default Logo;
