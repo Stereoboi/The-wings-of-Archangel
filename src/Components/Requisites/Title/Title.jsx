@@ -1,11 +1,16 @@
-import { Box, Typography, Button } from "@mui/material";
-import { Slogan } from "./Title.styled";
+import { ReqTitle, ReqWrapper, ReqTitleMain } from "./Title.styled";
 const RequisitesTitle = () => {
   return (
-    <Box>
-      <Slogan variant="body2">ПІДТРИМАЙ 47 БРИГАДУ</Slogan>
-      <Button>click me</Button>
-    </Box>
+    <ReqWrapper>
+      <ReqTitle variant="body1">ПІДТРИМАЙ 77 БРИГАДУ</ReqTitle>
+      <ReqTitleMain variant="h1">
+        Реквізити благодійного фонду 77 БРИГАДИ
+      </ReqTitleMain>
+      <ReqTitle variant="body1">
+        ВИ МОЖЕТЕ ЗРОБИТИ ВНЕСОК ДО НАШОГО БЛАГОДІЙНОГО ФОНДУ БУДЬ-ЯКИМ ЗРУЧНИМ
+        ДЛЯ ВАС СПОСОБОМ
+      </ReqTitle>
+    </ReqWrapper>
   );
 };
 

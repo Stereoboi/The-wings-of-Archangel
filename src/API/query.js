@@ -1,28 +1,28 @@
-import { createClient } from "urql";
+// import { createClient } from "urql";
 
-export const PAYMENT_QUERY = `
-query{
-  purchases{
-    data{
-      attributes{
-        name
-        description
-        image{
-          data{
-            attributes{
-              url
-            }
-          }
-        }
-      }
-    }
-  }
-}
-`;
+// export const PAYMENT_QUERY = `
+// query{
+//   purchases{
+//     data{
+//       attributes{
+//         name
+//         description
+//         image{
+//           data{
+//             attributes{
+//               url
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// `;
 
-export const client = createClient({
-  url: "https://wings-backend.onrender.com/graphql",
-});
+// export const client = createClient({
+//   url: "https://wings-backend.onrender.com/graphql",
+// });
 // export const client = createClient({
 //   url: "http://localhost:1337/graphql",
 // });

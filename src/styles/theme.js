@@ -18,7 +18,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Roboto, sans-serif", // change to your desired font family
+    fontFamily: " Roboto, sans-serif", // change to your desired font family
     fontSize: 14, // change to your desired base font size
     h1: {
       fontSize: "3rem", // change to your desired heading sizes
@@ -69,7 +69,15 @@ const theme = createTheme({
       },
       containedPrimary: {
         "&:hover": {
-          backgroundColor: "#CC964E", // change to your desired hover color
+          // backgroundColor: "#CC964E", // change to your desired hover color
+        },
+      },
+    },
+    MuiTextField: {
+      root: {
+        borderRadius: 4, // change to your desired border radius
+        "& .MuiOutlinedInput-root": {
+          borderRadius: 4, // change to your desired border radius for the input
         },
       },
     },
