@@ -62,30 +62,25 @@ const theme = createTheme({
     borderRadius: 8, // change to your desired border radius
   },
   spacing: 8, // change to your desired base spacing
-  overrides: {
+  components: {
+    MuiList: {
+      styleOverrides: {
+        root: {
+          padding: "0",
+        },
+      },
+    },
+    MuiDivider: {
+      styleOverrides: {
+        root: {
+          border: "0",
+        },
+      },
+    },
     MuiButton: {
-      root: {
-        textTransform: "none", // remove uppercase text transform on buttons
-      },
-      containedPrimary: {
-        "&:hover": {
-          // backgroundColor: "#CC964E", // change to your desired hover color
-        },
-      },
-    },
-    MuiTextField: {
-      root: {
-        borderRadius: 4, // change to your desired border radius
-        "& .MuiOutlinedInput-root": {
-          borderRadius: 4, // change to your desired border radius for the input
-        },
-      },
-    },
-    MuiTextField: {
-      root: {
-        borderRadius: 4, // change to your desired border radius
-        "& .MuiOutlinedInput-root": {
-          borderRadius: 4, // change to your desired border radius for the input
+      styleOverrides: {
+        root: {
+          padding: "0",
         },
       },
     },

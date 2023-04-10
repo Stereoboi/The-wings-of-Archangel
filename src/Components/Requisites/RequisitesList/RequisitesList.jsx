@@ -3,8 +3,8 @@ import { ReqList } from "./RequisitesList.styled";
 const RequisitesList = ({ requisites }) => {
   return (
     <ReqList>
-      {requisites.map(({ id, attributes: { Name, number } }) => {
-        return <RequisitesItem key={id} name={Name} number={number} id={id} />;
+      {requisites.map(({ id, attributes: { name, number } }) => {
+        return <RequisitesItem key={id} name={name} number={number} id={id} />;
       })}
     </ReqList>
   );
