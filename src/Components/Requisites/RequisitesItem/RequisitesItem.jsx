@@ -80,7 +80,7 @@ export const RequisitesItem = ({ name, number, id }) => {
               <PaymentImgWrapper>
                 <JarIcon src={jarImg} />
               </PaymentImgWrapper>
-              <Tooltip title={"Поповнити через Apple Pay"}>
+              <Tooltip title={"Поповнити Банку"}>
                 <BankLink
                   href="https://mui.com/material-ui/material-icons/"
                   aria-label="Клікніть щоб поповнити банку"
@@ -89,21 +89,21 @@ export const RequisitesItem = ({ name, number, id }) => {
                   <BankIcon src={monoImg} alt="monobank icon" />
                 </BankLink>
               </Tooltip>
-              <Tooltip title={"Поповнити через Google Pay"}>
-                <>
-                  <PaymentImgWrapper>
-                    <ApayIcon src={aPayImg} />
-                    <GpayIcon src={gPayImg} />
-                  </PaymentImgWrapper>
+              <>
+                <PaymentImgWrapper>
+                  <ApayIcon src={aPayImg} />
+                  <GpayIcon src={gPayImg} />
+                </PaymentImgWrapper>
+                <Tooltip title={"Перевести через GooglePay або ApplePay"}>
                   <BankLink
                     href="https://mui.com/material-ui/material-icons/"
-                    aria-label="Клікніть щоб поповнити банку"
+                    aria-label="Клікніть щоб перевести зручним для вас способов ApplePay чи GooglePay"
                   >
                     <BtnText>Перевести</BtnText>
                     <BankIcon src={monoImg} alt="monobank icon" />
                   </BankLink>
-                </>
-              </Tooltip>
+                </Tooltip>
+              </>
             </>
           )}
         </BtnWrapper>

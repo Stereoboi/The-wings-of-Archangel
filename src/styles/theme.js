@@ -3,26 +3,28 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#53001F", // change to your desired primary color
-    },
-    secondary: {
-      main: "#DDAF74", // change to your desired secondary color
+      main: "rgb(255, 255, 255)",
+      black: "rgb(0, 0, 0)",
     },
     background: {
-      default: "#f5f5f5", // change to your desired default background color
-      paper: "#ffffff", // change to your desired paper background color
+      default: "rgb(255, 255, 255)", //4
+      khaki: "rgb(186, 178, 167)", //4
+      grey: "rgb(129, 126, 127)", //3
+      browny: "rgb(122, 100, 107)", //2
+      bronze: "rgb(154, 92, 27)", //1
+      maroon: "rgb(78, 3, 17)", //5
     },
     text: {
-      primary: "#333333", // change to your desired primary text color
-      secondary: "#A7AAAF", // change to your desired secondary text color
+      primary: "rgb(0, 0, 0)",
+      secondary: "rgb(102, 111, 101)",
     },
   },
   typography: {
-    fontFamily: " Roboto, sans-serif", // change to your desired font family
-    fontSize: 14, // change to your desired base font size
+    fontFamily: " Ubuntu, sans-serif",
+    fontSize: 14,
     h1: {
-      fontSize: "3rem", // change to your desired heading sizes
-      fontWeight: 500, // change to your desired heading font weight
+      fontSize: "3rem",
+      fontWeight: 500,
     },
     h2: {
       fontSize: "2.5rem",
@@ -46,7 +48,7 @@ const theme = createTheme({
     },
     body1: {
       fontSize: "1rem",
-      lineHeight: 1.5, // change to your desired line height
+      lineHeight: 1.5,
     },
     body2: {
       fontSize: "0.875rem",
@@ -55,13 +57,13 @@ const theme = createTheme({
     caption: {
       fontSize: "0.75rem",
       lineHeight: 1.5,
-      color: "#999999", // change to your desired caption color
+      color: "#999999",
     },
   },
   shape: {
-    borderRadius: 8, // change to your desired border radius
+    borderRadius: "4px",
   },
-  spacing: 8, // change to your desired base spacing
+  spacing: 8,
   components: {
     MuiList: {
       styleOverrides: {
@@ -81,6 +83,18 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           padding: "0",
+          "&:hover": {
+            backgroundColor: "transparent",
+          },
+        },
+      },
+    },
+  },
+  overrides: {
+    MuiCssBaseline: {
+      "@global": {
+        body: {
+          color: "green",
         },
       },
     },

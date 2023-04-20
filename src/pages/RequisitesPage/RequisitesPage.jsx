@@ -8,11 +8,12 @@ import {
   PlnList,
   EurList,
 } from "../../Components/Requisites";
-import { Container } from "@mui/material";
-import { fetchData } from "../../API/requisites";
-
+import { RequisitesPageWrapper } from "./RequisitesPage.styled";
+import { Loader } from "../../Components/Loader/Loader";
 import { useQuery } from "urql";
 import { PAYMENT_QUERY } from "../../API/query";
+import theme from "../../styles/theme";
+import { Paper } from "@mui/material";
 
 const RequisitesPage = () => {
   const [status, setStatus] = useState(true);
@@ -40,10 +41,10 @@ const RequisitesPage = () => {
   }, [results]);
 
   return (
-    <Container maxWidth="lg">
+    <RequisitesPageWrapper maxWidth="lg">
       <RequisitesTitle />
       {status ? (
-        <div>LOADING......</div>
+        <Loader />
       ) : (
         <>
           <RequisitesList requisites={requisites} />
@@ -54,7 +55,7 @@ const RequisitesPage = () => {
           <EurList requisites={plnRequisites} />
         </>
       )}
-    </Container>
+    </RequisitesPageWrapper>
   );
 };
 

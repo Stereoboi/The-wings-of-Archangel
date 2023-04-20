@@ -23,7 +23,6 @@ export const BankRequisites = styled(Typography)(({ theme }) => ({
   padding: "1rem",
   [theme.breakpoints.up("md")]: {
     fontSize: "1.3rem",
-    // padding: "2rem",
   },
   [theme.breakpoints.up("lg")]: {
     fontSize: "1.5rem",
@@ -35,7 +34,6 @@ export const BankWrapper = styled(Box)(({ theme }) => ({
 
   [theme.breakpoints.up("md")]: {
     display: "flex",
-    // alignItems: "baseline",
     alignItems: "center",
     justifyContent: "space-between",
   },
@@ -43,13 +41,13 @@ export const BankWrapper = styled(Box)(({ theme }) => ({
 
 export const LineDivider = styled(Divider)(({ theme }) => ({
   height: "2px",
-  backgroundColor: "black",
+  backgroundColor: theme.palette.primary.black,
 }));
 
 export const CopyBtn = styled(Button)(({ theme }) => ({
   padding: "0.5rem",
   "&:hover": {
-    backgroundColor: "white",
+    backgroundColor: theme.palette.primary.main,
   },
 
   [theme.breakpoints.up("md")]: {
@@ -61,7 +59,7 @@ export const BtnText = styled(Typography)(({ theme }) => ({
   fontWeight: 500,
   textTransform: "uppercase",
   display: "flex",
-  color: "black",
+  color: theme.palette.primary.black,
   // marginRight: "1rem",
   width: "7rem",
   [theme.breakpoints.up("md")]: {
@@ -76,10 +74,10 @@ export const BtnText = styled(Typography)(({ theme }) => ({
 }));
 
 export const CopyIcon = styled(ContentCopyIcon)(({ theme }) => ({
-  backgroundColor: "black",
-  color: "white",
+  backgroundColor: theme.palette.primary.black,
+  color: theme.palette.primary.main,
   borderRadius: "50%",
-  padding: "4px",
+  padding: theme.shape.borderRadius,
   fontSize: "1.6rem",
   [theme.breakpoints.up("md")]: {
     fontSize: "1.8rem",
@@ -90,7 +88,6 @@ export const CopyIcon = styled(ContentCopyIcon)(({ theme }) => ({
 }));
 
 export const BtnWrapper = styled(Box)(({ theme }) => ({
-  // width: "25%",
   display: "flex",
   alignItems: "center",
   flexDirection: "column",
@@ -123,8 +120,8 @@ export const BankIcon = styled("img")(({ theme }) => ({
     height: "1.8rem",
   },
   [theme.breakpoints.up("lg")]: {
-    width: "1.8rem",
-    height: "1.8rem",
+    width: "2rem",
+    height: "2rem",
   },
 }));
 

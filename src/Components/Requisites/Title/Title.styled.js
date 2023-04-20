@@ -4,9 +4,7 @@ import { Typography, Box } from "@mui/material";
 export const ReqTitle = styled(Typography)(({ theme }) => ({
   marginTop: "1.5rem",
   color: "rgba(0, 0, 0, 1)",
-  [theme.breakpoints.down("sm")]: {
-    // backgroundColor: theme.palette.primary.main,
-  },
+  [theme.breakpoints.down("sm")]: {},
 }));
 
 export const ReqTitleMain = styled(Typography)(({ theme }) => ({
@@ -15,7 +13,7 @@ export const ReqTitleMain = styled(Typography)(({ theme }) => ({
   lineHeight: "2.3rem",
   textTransform: "uppercase",
   marginTop: "1.2rem",
-  color: "rgba(0, 0, 0, 1)",
+  color: theme.palette.text,
   [theme.breakpoints.up("md")]: {
     fontSize: "2.5rem",
     lineHeight: "2.7rem",
