@@ -2,14 +2,66 @@ import { createClient } from "urql";
 
 export const PAYMENT_QUERY = `
 query{
-  payments{
+  plns{
     data{
+      id
       attributes{
-        monobank
+        name,
+        number
+      }
+    }
+  }
+  usds{
+    data{
+      id
+      attributes{
+        name,
+        number
+      }
+    }
+  }
+  eurs{
+    data{
+      id
+      attributes{
+        name,
+        number
+      }
+    }
+  }
+  uahs{
+    data{
+      id
+      attributes{
+        name,
+        number
+      }
+    }
+  }
+  cryptoDetails{
+    data{
+      id
+      attributes{
+        name,
+        number
+      }
+    }
+  }
+  bankDetails{
+    data{
+      id
+      attributes{
+        name,
+        number
       }
     }
   }
 }
 `;
 
-export const client = createClient({ url: "http://localhost:1337/graphql" });
+export const client = createClient({
+  url: "https://wings-backend.onrender.com/graphql",
+});
+// export const client = createClient({
+//   url: "http://localhost:1337/graphql",
+// });

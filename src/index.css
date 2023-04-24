@@ -80,9 +80,7 @@ td {
 /* Set default font family, size, and color */
 body {
   font-family: Arial, sans-serif;
-  font-size: 16px;
   line-height: 1.5;
-  color: #333;
 }
 
 /* Remove list styles (bullet points) */
@@ -96,12 +94,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
-/* Set default background color to white */
-body {
-  background-color: #fff;
-}
-
 /* Add global link styles */
 a {
   color: #333;

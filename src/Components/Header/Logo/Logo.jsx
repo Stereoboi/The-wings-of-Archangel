@@ -1,9 +1,7 @@
 const Logo = () => {
   return (
     <>
-      <div>lg</div>
-      <div>lg</div>
-      <div>lg</div>
+      <h1>Logo</h1>
     </>
   );
 };
