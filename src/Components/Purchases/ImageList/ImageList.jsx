@@ -3,7 +3,7 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import ImageSlider from "../Slider/Slider";
-import Grid from "@mui/material/Unstable_Grid2";
+
 import { useState } from "react";
 
 export default function TitleBarImageList({ imageUrl }) {
@@ -22,7 +22,7 @@ export default function TitleBarImageList({ imageUrl }) {
   return (
     <ImageList>
       {imageUrl.map((item) => (
-        <ImageListItem key={item.id}>
+        <ImageListItem key={item.id} id={item.id}>
           <img
             src={`${item.attributes.images.data[0].attributes.url}?w=248&h=200&fit=crop&auto=format`}
             srcSet={`${item.attributes.images.data[0].attributes.url}?w=248&fit=crop&auto=format&dpr=2 2x`}
