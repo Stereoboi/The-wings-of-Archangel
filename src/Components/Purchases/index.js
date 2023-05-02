@@ -1,4 +1,4 @@
 import TitleBarImageList from "./ImageList/ImageList";
-import ImageSlider from "./Slider/Slider";
+import PurchasesTitle from "./Title/PurchasesTitle";
 
-export { TitleBarImageList, ImageSlider };
+export { TitleBarImageList, PurchasesTitle };

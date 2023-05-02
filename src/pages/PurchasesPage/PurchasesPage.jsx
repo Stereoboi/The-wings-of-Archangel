@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { useQuery } from "urql";
 import { IMAGE_QUERY } from "../../API/query";
-import { TitleBarImageList } from "../../Components/Purchases";
+import { TitleBarImageList, PurchasesTitle } from "../../Components/Purchases";
 import { Container } from "@mui/material";
 import { useState } from "react";
+
 const PurchasesPage = () => {
   const [results] = useQuery({ query: IMAGE_QUERY });
   const [imageUrl, setImageUrl] = useState([]);
@@ -19,6 +20,7 @@ const PurchasesPage = () => {
 
   return (
     <Container>
+      <PurchasesTitle />
       <TitleBarImageList imageUrl={imageUrl} />
     </Container>
   );
