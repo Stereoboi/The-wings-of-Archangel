@@ -26,8 +26,6 @@ export const SwiperSlider = ({ slides, open, handleClose }) => {
           spaceBetween={500}
           slidesPerView={1}
           navigation
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
         >
           {slides.map((slide) => {
             console.log(slide.attributes.url);

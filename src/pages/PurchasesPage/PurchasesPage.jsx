@@ -4,15 +4,17 @@ import { IMAGE_QUERY } from "../../API/query";
 import { TitleBarImageList, PurchasesTitle } from "../../Components/Purchases";
 import { Container } from "@mui/material";
 import { useState } from "react";
+import { Loader } from "../../Components/Loader/Loader";
 
 const PurchasesPage = () => {
+  const [status, setStatus] = useState(true);
   const [results] = useQuery({ query: IMAGE_QUERY });
   const [imageUrl, setImageUrl] = useState([]);
 
   useEffect(() => {
     const { data, fetching, error } = results;
     if (!fetching) {
-      // console.log(data.purchases);
+      setStatus(false);
       setImageUrl(data.purchases.data);
     }
     // }
@@ -21,7 +23,7 @@ const PurchasesPage = () => {
   return (
     <Container>
       <PurchasesTitle />
-      <TitleBarImageList imageUrl={imageUrl} />
+      {status ? <Loader /> : <TitleBarImageList imageUrl={imageUrl} />}
     </Container>
   );
 };

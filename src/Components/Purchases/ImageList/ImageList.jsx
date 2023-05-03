@@ -24,19 +24,21 @@ export default function TitleBarImageList({ imageUrl }) {
   return (
     <GalleryWrapper>
       <ImageList>
-        {imageUrl.map((item) => (
-          <ImageListItem key={item.id} id={item.id}>
-            <img
-              src={`${item.attributes.images.data[0].attributes.url}?w=248&h=200&fit=crop&auto=format`}
-              srcSet={`${item.attributes.images.data[0].attributes.url}?w=248&fit=crop&auto=format&dpr=2 2x`}
-              alt={item.attributes.description}
-              loading="lazy"
-              onClick={() => handleOpen(item)}
-              style={{ cursor: "pointer" }}
-            />
-            <ImageListItemBar title={item.attributes.description} />
-          </ImageListItem>
-        ))}
+        {imageUrl.map((item) => {
+          return (
+            <ImageListItem key={item.id} id={item.id}>
+              <img
+                src={`${item.attributes.images.data[0].attributes.url}?w=248&h=200&fit=crop&auto=format`}
+                srcSet={`${item.attributes.images.data[0].attributes.url}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                alt={item.attributes.description}
+                loading="lazy"
+                onClick={() => handleOpen(item)}
+                style={{ cursor: "pointer" }}
+              />
+              <ImageListItemBar title={item.attributes.description} />
+            </ImageListItem>
+          );
+        })}
       </ImageList>
       <SwiperSlider
         slides={currentImages}
