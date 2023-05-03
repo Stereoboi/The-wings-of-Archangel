@@ -81,9 +81,9 @@ query{
 }
 `;
 
-// export const client = createClient({
-//   url: "https://wings-backend.onrender.com/graphql",
-// });
 export const client = createClient({
-  url: "http://localhost:1337/graphql",
+  url: "https://wings-backend.onrender.com/graphql",
 });
+// export const client = createClient({
+//   url: "http://localhost:1337/graphql",
+// });
