@@ -12,8 +12,6 @@ import { RequisitesPageWrapper } from "./RequisitesPage.styled";
 import { Loader } from "../../Components/Loader/Loader";
 import { useQuery } from "urql";
 import { PAYMENT_QUERY } from "../../API/query";
-import theme from "../../styles/theme";
-import { Paper } from "@mui/material";
 
 const RequisitesPage = () => {
   const [status, setStatus] = useState(true);

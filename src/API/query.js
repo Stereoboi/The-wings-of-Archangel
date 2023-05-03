@@ -59,6 +59,28 @@ query{
 }
 `;
 
+export const IMAGE_QUERY = `
+query{
+  purchases{
+    data{
+      id
+      attributes{
+        description
+        images{
+          data{
+            id
+            attributes{
+              url
+              name
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`;
+
 export const client = createClient({
   url: "https://wings-backend.onrender.com/graphql",
 });

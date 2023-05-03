@@ -65,6 +65,34 @@ const theme = createTheme({
   },
   spacing: 8,
   components: {
+    MuiSlider: {
+      styleOverrides: {
+        root: {
+          color: "gray", // колір слайдера
+          height: 8, // висота слайдера
+        },
+        thumb: {
+          height: 20, // висота кінчика слайдера
+          width: 20, // ширина кінчика слайдера
+          backgroundColor: "white", // колір кінчика слайдера
+          boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.3)", // тінь кінчика слайдера
+          "&:hover": {
+            boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.6)", // тінь кінчика слайдера при наведенні
+          },
+          "&$focusVisible": {
+            boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.6)", // тінь кінчика слайдера при фокусуванні
+          },
+        },
+        track: {
+          height: 8, // висота доріжки слайдера
+          borderRadius: 4, // радіус закруглення доріжки слайдера
+        },
+        rail: {
+          height: 8, // висота фонової доріжки слайдера
+          borderRadius: 4, // радіус закруглення фонової доріжки слайдера
+        },
+      },
+    },
     MuiList: {
       styleOverrides: {
         root: {
